@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Coding - Pemula Sampai Mahir</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    code {
+      background: #ecf0f1;
+      padding: 2px 6px;
+      border-radius: 5px;
+      display: block;
+      margin: 5px 0;
+      white-space: pre-wrap;
+    }
+    pre {
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: #fff;
+    }
+    .quiz-container {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+    .quiz-question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .quiz-options {
+      margin-left: 20px;
+    }
+    .quiz-options label {
+      display: block;
+      margin: 5px 0;
+    }
+    .quiz-submit {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .quiz-submit:hover {
+      background: #2980b9;
+    }
+    .quiz-result {
+      margin-top: 15px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .success {
+      background: #d4edda;
+      color: #155724;
+    }
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+    .code-runner {
+      margin-top: 10px;
+    }
+    .run-button {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .run-button:hover {
+      background: #219653;
+    }
+    .output {
+      background: #2c3e50;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      min-height: 50px;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #f39c12;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌐 Belajar Coding Untuk Pemula</h1>
+  <p>Website pembelajaran HTML, CSS, JavaScript, dan Python</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#html">HTML</a>
+  <a href="#css">CSS</a>
+  <a href="#js">JavaScript</a>
+  <a href="#python">Python</a>
+  <a href="#quiz">Quiz</a>
+</nav>
+
+<!-- ================= HOME ================= -->
+<section id="home">
+  <h2>Selamat Datang</h2>
+  <p>Website ini dibuat untuk membantu pemula belajar coding dari dasar. Kamu akan mempelajari:</p>
+  <ul>
+    <li><b>HTML</b> → Struktur dasar halaman web</li>
+    <li><b>CSS</b> → Memberikan gaya dan desain pada web</li>
+    <li><b>JavaScript</b> → Menambahkan interaktivitas</li>
+    <li><b>Python</b> → Bahasa populer untuk backend, data science, AI</li>
+  </ul>
+  <p>Setiap bagian dilengkapi dengan contoh kode dan penjelasan yang mudah dipahami. Jangan lupa coba kuis di akhir untuk menguji pemahamanmu!</p>
+</section>
+
+<!-- ================= MATERI HTML ================= -->
+<section id="html">
+  <h2>Belajar HTML</h2>
+  <p>HTML (<i>HyperText Markup Language</i>) adalah bahasa dasar untuk membuat struktur halaman web.</p>
+
+  <h3>1. Struktur Dasar HTML</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <h3>2. Heading & Paragraf</h3>
+  <pre><code>&lt;h1&gt;Judul Utama&lt;/h1&gt;
+&lt;h2&gt;Sub Judul&lt;/h2&gt;
+&lt;p&gt;Ini adalah paragraf teks.&lt;/p&gt;
+</code></pre>
+
+  <h3>3. Link & Gambar</h3>
+  <pre><code>&lt;a href="https://www.google.com"&gt;Klik ke Google&lt;/a&gt;
+&lt;img src="gambar.jpg" alt="Contoh Gambar" width="200"&gt;
+</code></pre>
+
+  <h3>4. Daftar (List)</h3>
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Langkah 1&lt;/li&gt;
+  &lt;li&gt;Langkah 2&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+  <h3>5. Tabel</h3>
+  <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;Umur&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Andi&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+  <h3>6. Formulir</h3>
+  <pre><code>&lt;form&gt;
+  Nama: &lt;input type="text"&gt; &lt;br&gt;
+  Email: &lt;input type="email"&gt; &lt;br&gt;
+  Password: &lt;input type="password"&gt; &lt;br&gt;
+  &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;
+</code></pre>
+
+  <h3>7. Multimedia</h3>
+  <pre><code>&lt;audio controls&gt;
+  &lt;source src="lagu.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</code></pre>
+
+  <h3>8. Semantic HTML</h3>
+  <pre><code>&lt;header&gt;Bagian Header&lt;/header&gt;
+&lt;nav&gt;Menu Navigasi&lt;/nav&gt;
+&lt;main&gt;Isi Utama&lt;/main&gt;
+&lt;footer&gt;Bagian Footer&lt;/footer&gt;
+</code></pre>
+</section>
+
+<!-- ================= MATERI CSS ================= -->
+<section id="css">
+  <h2>Belajar CSS</h2>
+  <p>CSS digunakan untuk memberi gaya pada halaman HTML.</p>
+
+  <h3>1. Cara Menyisipkan CSS</h3>
+  <pre><code>&lt;style&gt;
+  body {
+    background-color: lightblue;
+  }
+&lt;/style&gt;
+
+&lt;link rel="stylesheet" href="style.css"&gt;
+</code></pre>
+
+  <h3>2. Selector Dasar</h3>
+  <pre><code>p {
+  color: red;
+}
+
+#judul {
+  font-size: 24px;
+}
+
+.kotak {
+  border: 1px solid black;
+}
+</code></pre>
+
+  <h3>3. Warna & Background</h3>
+  <pre><code>body {
+  background: #f4f4f9;
+  color: #333;
+}
+
+h1 {
+  background-color: navy;
+  color: white;
+}
+</code></pre>
+
+  <h3>4. Font & Teks</h3>
+  <pre><code>p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+</code></pre>
+
+  <h3>5. Box Model</h3>
+  <pre><code>div {
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid black;
+}
+</code></pre>
+
+  <h3>6. Flexbox</h3>
+  <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</code></pre>
+
+  <h3>7. Grid</h3>
+  <pre><code>.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+</code></pre>
+
+  <h3>8. Animasi</h3>
+  <pre><code>@keyframes gerak {
+  0% {background-color: red;}
+  100% {background-color: blue;}
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  animation: gerak 3s infinite;
+}
+</code></pre>
+</section>
+
+<!-- ================= MATERI JAVASCRIPT ================= -->
+<section id="js">
+  <h2>Belajar JavaScript</h2>
+  <p>JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web interaktif.</p>
+
+  <h3>1. Cara Menyisipkan JavaScript</h3>
+  <pre><code>&lt;script&gt;
+  // Kode JavaScript di sini
+&lt;/script&gt;
+
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</code></pre>
+
+  <h3>2. Variabel dan Tipe Data</h3>
+  <pre><code>let nama = "Budi"; // String
+const umur = 20; // Number
+let isStudent = true; // Boolean
+let hobbies = ["membaca", "coding", "olahraga"]; // Array
+let person = {nama: "Andi", umur: 25}; // Object
+</code></pre>
+  <div class="code-runner">
+    <button class="run-button" onclick="runJSExample1()">Jalankan Kode</button>
+    <div class="output" id="js-output-1"></div>
+  </div>
+
+  <h3>3. Operator</h3>
+  <pre><code>let a = 10;
+let b = 5;
+
+console.log(a + b); // 15
+console.log(a - b); // 5
+console.log(a * b); // 50
+console.log(a / b); // 2
+console.log(a % b); // 0
+</code></pre>
+  <div class="code-runner">
+    <button class="run-button" onclick="runJSExample2()">Jalankan Kode</button>
+    <div class="output" id="js-output-2"></div>
+  </div>
+
+  <h3>4. Kondisional (If-Else)</h3>
+  <pre><code>let nilai = 85;
+
+if (nilai >= 90) {
+  console.log("Grade A");
+} else if (nilai >= 80) {
+  console.log("Grade B");
+} else if (nilai >= 70) {
+  console.log("Grade C");
+} else {
+  console.log("Grade D");
+}
+</code></pre>
+  <div class="code-runner">
+    <button class="run-button" onclick="runJSExample3()">Jalankan Kode</button>
+    <div class="output" id="js-output-3"></div>
+  </div>
+
+  <h3>5. Perulangan (Loop)</h3>
+  <pre><code>// For loop
+for (let i = 1; i <= 5; i++) {
+  console.log("Iterasi ke-" + i);
+}
+
+// While loop
+let count = 1;
+while (count <= 3) {
+  console.log("Count: " + count);
+  count++;
+}
+</code></pre>
+  <div class="code-runner">
+    <button class="run-button" onclick="runJSExample4()">Jalankan Kode</button>
+    <div class="output" id="js-output-4"></div>
+  </div>
+
+  <h3>6. Fungsi</h3>
+  <pre><code>// Fungsi biasa
+function sapa(nama) {
+  return "Halo, " + nama + "!";
+}
+
+// Arrow function (ES6)
+const tambah = (a, b) => a + b;
+
+console.log(sapa("Dian"));
+console.log(tambah(5, 3));
+</code></pre>
+  <div class="code-runner">
+    <button class="run-button" onclick="runJSExample5()">Jalankan Kode</button>
+    <div class="output" id="js-output-5"></div>
+  </div>
+
+  <h3>7. Manipulasi DOM</h3>
+  <pre><code>// Mengambil elemen
+let judul = document.getElementById("judul");
+
+// Mengubah konten
+judul.innerHTML = "Judul Baru";
+
+// Mengubah style
+judul.style.color = "blue";
+
+// Menambahkan event listener
+judul.addEventListener("click", function() {
+  alert("Judul diklik!");
+});
+</code></pre>
+  <div class="code-runner">
+    <button class="run-button" onclick="runJSExample6()">Jalankan Kode</button>
+    <div class="output" id="js-output-6"></div>
+  </div>
+</section>
+
+<!-- ================= MATERI PYTHON ================= -->
+<section id="python">
+  <h2>Belajar Python</h2>
+  <p>Python adalah bahasa pemrograman tingkat tinggi yang mudah dipahami dan serbaguna.</p>
+
+  <h3>1. Variabel dan Tipe Data</h3>
+  <pre><code>nama = "Budi"  # String
+umur = 20     # Integer
+tinggi = 170.5 # Float
+is_student = True  # Boolean
+hobi = ["membaca", "coding", "olahraga"]  # List
+orang = {"nama": "Andi", "umur": 25}  # Dictionary
+</code></pre>
+
+  <h3>2. Operator</h3>
+  <pre><code>a = 10
+b = 5
+
+print(a + b)  # 15
+print(a - b)  # 5
+print(a * b)  # 50
+print(a / b)  # 2.0
+print(a % b)  # 0
+</code></pre>
+
+  <h3>3. Input dan Output</h3>
+  <pre><code>nama = input("Masukkan nama Anda: ")
+print("Halo, " + nama + "!")
+</code></pre>
+
+  <h3>4. Kondisional (If-Else)</h3>
+  <pre><code>nilai = 85
+
+if nilai >= 90:
+    print("Grade A")
+elif nilai >= 80:
+    print("Grade B")
+elif nilai >= 70:
+    print("Grade C")
+else:
+    print("Grade D")
+</code></pre>
+
+  <h3>5. Perulangan (Loop)</h3>
+  <pre><code># For loop
+for i in range(1, 6):
+    print("Iterasi ke-", i)
+
+# While loop
+count = 1
+while count <= 3:
+    print("Count:", count)
+    count += 1
+</code></pre>
+
+  <h3>6. Fungsi</h3>
+  <pre><code>def sapa(nama):
+    return "Halo, " + nama + "!"
+
+def tambah(a, b):
+    return a + b
+
+print(sapa("Dian"))
+print(tambah(5, 3))
+</code></pre>
+
+  <h3>7. List dan Dictionary</h3>
+  <pre><code># List
+buah = ["apel", "jeruk", "mangga"]
+buah.append("pisang")
+print(buah[0])  # apel
+
+# Dictionary
+mahasiswa = {"nama": "Rina", "umur": 22, "jurusan": "Informatika"}
+print(mahasiswa["nama"])  # Rina
+</code></pre>
+
+  <h3>8. Exception Handling</h3>
+  <pre><code>try:
+    angka = int(input("Masukkan angka: "))
+    hasil = 10 / angka
+    print("Hasil:", hasil)
+except ZeroDivisionError:
+    print("Tidak bisa membagi dengan nol!")
+except ValueError:
+    print("Input harus berupa angka!")
+</code></pre>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section id="quiz">
+  <h2>Kuis Coding</h2>
+  <p>Uji pemahamanmu dengan kuis berikut! Pilih jawaban yang benar untuk setiap pertanyaan.</p>
+
+  <div class="quiz-container">
+    <div class="quiz-question">1. Apa kepanjangan dari HTML?</div>
+    <div class="quiz-options">
+      <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label>
+      <label><input type="radio" name="q1" value="b"> HyperText Markdown Language</label>
+      <label><input type="radio" name="q1" value="c"> HighText Machine Language</label>
+    </div>
+  </div>
+
+  <div class="quiz-container">
+    <div class="quiz-question">2. Manakah yang benar untuk mendefinisikan variabel di JavaScript?</div>
+    <div class="quiz-options">
+      <label><input type="radio" name="q2" value="a"> variable nama = "Budi";</label>
+      <label><input type="radio" name="q2" value="b"> let nama = "Budi";</label>
+      <label><input type="radio" name="q2" value="c"> nama = "Budi";</label>
+    </div>
+  </div>
+
+  <div class="quiz-container">
+    <div class="quiz-question">3. Manakah yang merupakan sintaks CSS yang benar?</div>
+    <div class="quiz-options">
+      <label><input type="radio" name="q3" value="a"> p {color: red;}</label>
+      <label><input type="radio" name="q3" value="b"> p (color: red;)</label>
+      <label><input type="radio" name="q3" value="c"> p [color: red;]</label>
+    </div>
+  </div>
+
+  <div class="quiz-container">
+    <div class="quiz-question">4. Bagaimana cara membuat komentar di Python?</div>
+    <div class="quiz-options">
+      <label><input type="radio" name="q4" value="a"> // Ini komentar</label>
+      <label><input type="radio" name="q4" value="b"> /* Ini komentar */</label>
+      <label><input type="radio" name="q4" value="c"> # Ini komentar</label>
+    </div>
+  </div>
+
+  <div class="quiz-container">
+    <div class="quiz-question">5. Manakah yang bukan tipe data di JavaScript?</div>
+    <div class="quiz-options">
+      <label><input type="radio" name="q5" value="a"> String</label>
+      <label><input type="radio" name="q5" value="b"> Integer</label>
+      <label><input type="radio" name="q5" value="c"> Float</label>
+    </div>
+  </div>
+
+  <button class="quiz-submit" onclick="checkQuiz()">Periksa Jawaban</button>
+  <div id="quiz-result"></div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Belajar Coding. Semua hak dilindungi.</p>
+  <p>Website ini dibuat untuk tujuan edukasi.</p>
+</footer>
+
+<a href="#" class="back-to-top">↑</a>
+
+<script>
+  // Fungsi untuk menjalankan contoh kode JavaScript
+  function runJSExample1() {
+    let nama = "Budi";
+    const umur = 20;
+    let isStudent = true;
+    let hobbies = ["membaca", "coding", "olahraga"];
+    let person = {nama: "Andi", umur: 25};
+    
+    let output = `nama: ${nama}, tipe: ${typeof nama}\n`;
+    output += `umur: ${umur}, tipe: ${typeof umur}\n`;
+    output += `isStudent: ${isStudent}, tipe: ${typeof isStudent}\n`;
+    output += `hobbies: ${hobbies}, tipe: ${typeof hobbies}\n`;
+    output += `person: ${JSON.stringify(person)}, tipe: ${typeof person}`;
+    
+    document.getElementById("js-output-1").textContent = output;
+  }
+
+  function runJSExample2() {
+    let a = 10;
+    let b = 5;
+    
+    let output = `${a} + ${b} = ${a + b}\n`;
+    output += `${a} - ${b} = ${a - b}\n`;
+    output += `${a} * ${b} = ${a * b}\n`;
+    output += `${a} / ${b} = ${a / b}\n`;
+    output += `${a} % ${b} = ${a % b}`;
+    
+    document.getElementById("js-output-2").textContent = output;
+  }
+
+  function runJSExample3() {
+    let nilai = 85;
+    let grade = "";
+    
+    if (nilai >= 90) {
+      grade = "Grade A";
+    } else if (nilai >= 80) {
+      grade = "Grade B";
+    } else if (nilai >= 70) {
+      grade = "Grade C";
+    } else {
+      grade = "Grade D";
+    }
+    
+    document.getElementById("js-output-3").textContent = `Nilai: ${nilai}, ${grade}`;
+  }
+
+  function runJSExample4() {
+    let output = "For loop:\n";
+    for (let i = 1; i <= 5; i++) {
+      output += "Iterasi ke-" + i + "\n";
+    }
+    
+    output += "\nWhile loop:\n";
+    let count = 1;
+    while (count <= 3) {
+      output += "Count: " + count + "\n";
+      count++;
+    }
+    
+    document.getElementById("js-output-4").textContent = output;
+  }
+
+  function runJSExample5() {
+    function sapa(nama) {
+      return "Halo, " + nama + "!";
+    }
+    
+    const tambah = (a, b) => a + b;
+    
+    let output = sapa("Dian") + "\n";
+    output += tambah(5, 3);
+    
+    document.getElementById("js-output-5").textContent = output;
+  }
+
+  function runJSExample6() {
+    document.getElementById("js-output-6").textContent = "Coba klik judul bagian JavaScript di atas!";
+    
+    // Menambahkan event listener ke judul bagian JavaScript
+    const jsSection = document.getElementById("js");
+    const jsTitle = jsSection.querySelector("h2");
+    
+    jsTitle.style.cursor = "pointer";
+    jsTitle.addEventListener("click", function() {
+      alert("Judul JavaScript diklik! Ini contoh manipulasi DOM.");
+    });
+  }
+
+  // Fungsi untuk memeriksa kuis
+  function checkQuiz() {
+    const answers = {
+      q1: "a",
+      q2: "b",
+      q3: "a",
+      q4: "c",
+      q5: "c"
+    };
+    
+    let score = 0;
+    let totalQuestions = Object.keys(answers).length;
+    
+    // Periksa setiap jawaban
+    for (let question in answers) {
+      const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+      if (selectedOption && selectedOption.value === answers[question]) {
+        score++;
+      }
+    }
+    
+    // Tampilkan hasil
+    const resultElement = document.getElementById("quiz-result");
+    const percentage = (score / totalQuestions) * 100;
+    
+    let resultHTML = `<div class="quiz-result ${percentage >= 60 ? 'success' : 'error'}">`;
+    resultHTML += `Skor Anda: ${score} dari ${totalQuestions} (${percentage}%)<br>`;
+    
+    if (percentage === 100) {
+      resultHTML += "Sempurna! Anda sangat menguasai materi!";
+    } else if (percentage >= 80) {
+      resultHTML += "Bagus! Pemahaman Anda sudah baik.";
+    } else if (percentage >= 60) {
+      resultHTML += "Cukup baik, tapi masih perlu belajar lagi.";
+    } else {
+      resultHTML += "Anda perlu belajar lebih giat lagi.";
+    }
+    
+    resultHTML += "</div>";
+    resultElement.innerHTML = resultHTML;
+  }
+
+  // Smooth scroll untuk navigasi
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      window.scrollTo({
+        top: targetElement.offsetTop - 60,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
